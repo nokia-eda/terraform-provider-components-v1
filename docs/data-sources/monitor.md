@@ -72,10 +72,10 @@ This value must be greater than the minorThreshold.
 Optional:
 
 - `enabled` (Boolean) Enable or disable memory monitoring.
-- `utilization_1` (Attributes) Parameters relating to memory utilization monitoring. (see [below for nested schema](#nestedatt--spec--memory--utilization_1))
+- `utilization` (Attributes) Parameters relating to memory utilization monitoring. (see [below for nested schema](#nestedatt--spec--memory--utilization))
 
-<a id="nestedatt--spec--memory--utilization_1"></a>
-### Nested Schema for `spec.memory.utilization_1`
+<a id="nestedatt--spec--memory--utilization"></a>
+### Nested Schema for `spec.memory.utilization`
 
 Optional:
 
@@ -95,10 +95,10 @@ This value must be greater than the minorThreshold.
 Optional:
 
 - `enabled` (Boolean) Enable or disable volume monitoring.
-- `utilization_2` (Attributes) Parameters relating to volume utilization monitoring. (see [below for nested schema](#nestedatt--spec--volume--utilization_2))
+- `utilization` (Attributes) Parameters relating to volume utilization monitoring. (see [below for nested schema](#nestedatt--spec--volume--utilization))
 
-<a id="nestedatt--spec--volume--utilization_2"></a>
-### Nested Schema for `spec.volume.utilization_2`
+<a id="nestedatt--spec--volume--utilization"></a>
+### Nested Schema for `spec.volume.utilization`
 
 Optional:
 

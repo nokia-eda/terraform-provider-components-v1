@@ -23,7 +23,7 @@ description: |-
 
 - `fields` (String) a comma-separated list of resource fields to fetch/return.  If unspecified, all fields are fetched.  If empty, only key-fields are fetched.
 - `filter` (String) an EQL "where" expression that will be used to filter the set of resources returned.
-- `labelselector` (String) a label selector string to filter the results based on CR labels
+- `label_selector` (String) a label selector string to filter the results based on CR labels
 
 ### Read-Only
 
@@ -85,10 +85,10 @@ This value must be greater than the minorThreshold.
 Optional:
 
 - `enabled` (Boolean) Enable or disable memory monitoring.
-- `utilization_1` (Attributes) Parameters relating to memory utilization monitoring. (see [below for nested schema](#nestedatt--items--spec--memory--utilization_1))
+- `utilization` (Attributes) Parameters relating to memory utilization monitoring. (see [below for nested schema](#nestedatt--items--spec--memory--utilization))
 
-<a id="nestedatt--items--spec--memory--utilization_1"></a>
-### Nested Schema for `items.spec.memory.utilization_1`
+<a id="nestedatt--items--spec--memory--utilization"></a>
+### Nested Schema for `items.spec.memory.utilization`
 
 Optional:
 
@@ -108,10 +108,10 @@ This value must be greater than the minorThreshold.
 Optional:
 
 - `enabled` (Boolean) Enable or disable volume monitoring.
-- `utilization_2` (Attributes) Parameters relating to volume utilization monitoring. (see [below for nested schema](#nestedatt--items--spec--volume--utilization_2))
+- `utilization` (Attributes) Parameters relating to volume utilization monitoring. (see [below for nested schema](#nestedatt--items--spec--volume--utilization))
 
-<a id="nestedatt--items--spec--volume--utilization_2"></a>
-### Nested Schema for `items.spec.volume.utilization_2`
+<a id="nestedatt--items--spec--volume--utilization"></a>
+### Nested Schema for `items.spec.volume.utilization`
 
 Optional:
 
