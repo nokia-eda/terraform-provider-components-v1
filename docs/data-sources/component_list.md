@@ -24,6 +24,7 @@ description: |-
 - `fields` (String) a comma-separated list of resource fields to fetch/return.  If unspecified, all fields are fetched.  If empty, only key-fields are fetched.
 - `filter` (String) an EQL "where" expression that will be used to filter the set of resources returned.
 - `label_selector` (String) a label selector string to filter the results based on CR labels
+- `labelselector` (String) Deprecated: a label selector string to filter the results based on CR labels
 
 ### Read-Only
 
@@ -40,7 +41,9 @@ Optional:
 
 Read-Only:
 
+- `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
 - `api_version` (String)
+- `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
 - `status` (Attributes) ComponentStatus defines the observed state of Component (see [below for nested schema](#nestedatt--items--status))
@@ -54,6 +57,25 @@ Optional:
 Indicates the operation in which to apply the configuration
 - `slot` (String) Slot this Component resides in, unset for Components that do not have a slot or ID.
 - `type` (String) Type of Component.
+
+
+<a id="nestedatt--items--alarms"></a>
+### Nested Schema for `items.alarms`
+
+Read-Only:
+
+- `critical` (Number)
+- `major` (Number)
+- `minor` (Number)
+- `warning` (Number)
+
+
+<a id="nestedatt--items--deviations"></a>
+### Nested Schema for `items.deviations`
+
+Read-Only:
+
+- `count` (Number)
 
 
 <a id="nestedatt--items--metadata"></a>

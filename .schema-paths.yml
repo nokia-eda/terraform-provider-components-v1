@@ -3,6 +3,37 @@ app_group:
       path: /apps/components.eda.nokia.com
       method: GET
 
+intent_targets:
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/chassis/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/components/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/controlmodules/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/fabricmodules/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/fans/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/interfacemodules/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/powersupplies/{name}/_targets
+      method: GET
+
+k8_s_topology_request:
+  - create:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}/_topology
+      method: POST
+
 patch:
   - update:
       path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
@@ -193,38 +224,71 @@ com.nokia.eda.components.v1.power_supply_list:
       path: /apps/components.eda.nokia.com/v1/powersupplies
       method: GET
 
-totalPaths: 44
-totalSchemas: 54
-usedSchemas: 24
-unusedSchemas: 30
+totalPaths: 52
+totalSchemas: 89
+usedSchemas: 26
+unusedSchemas: 63
 unusedSchemaList:
   - AppGroupVersion
   - ErrorIndex
   - ErrorItem
   - ErrorResponse
+  - IntentTarget
   - K8SPatchOp
   - OverlayState
   - Resource
   - ResourceHistoryEntry
   - StatusDetails
   - TopoAttrMetadata
+  - TopoAttribute
+  - TopoBoolExpression
+  - TopoBoolLiteral
   - TopoElemMetadata
-  - TopoLinkEndpoint
+  - TopoEndpointBoolExpression
+  - TopoField
+  - TopoFixedBoolExpression
+  - TopoLabelSelector
+  - TopoLiteralStatusOrBadge
+  - TopoLiteralValue
+  - TopoLogicalExpression
   - TopoNodeGrouping
   - TopoOverlayEndpoint
   - TopoOverlayEndpointState
   - TopoOverlayLink
+  - TopoOverlayLinkGroup
+  - TopoOverlayLinkGroupEndpoint
   - TopoOverlayLinkState
   - TopoOverlayNode
+  - TopoOverlayNodeOrGroup
   - TopoOverlayNodeState
+  - TopoOverlayValue
   - TopoSchema
+  - TopoStateFilter
+  - TopoValue
+  - TopoValueExpression
   - Topology
+  - com.nokia.eda.components.v1.Chassis_alarms
+  - com.nokia.eda.components.v1.Chassis_deviations
   - com.nokia.eda.components.v1.Chassis_metadata
+  - com.nokia.eda.components.v1.Component_alarms
+  - com.nokia.eda.components.v1.Component_deviations
   - com.nokia.eda.components.v1.Component_metadata
+  - com.nokia.eda.components.v1.ControlModule_alarms
+  - com.nokia.eda.components.v1.ControlModule_deviations
   - com.nokia.eda.components.v1.ControlModule_metadata
+  - com.nokia.eda.components.v1.FabricModule_alarms
+  - com.nokia.eda.components.v1.FabricModule_deviations
   - com.nokia.eda.components.v1.FabricModule_metadata
+  - com.nokia.eda.components.v1.Fan_alarms
+  - com.nokia.eda.components.v1.Fan_deviations
   - com.nokia.eda.components.v1.Fan_metadata
+  - com.nokia.eda.components.v1.InterfaceModule_alarms
+  - com.nokia.eda.components.v1.InterfaceModule_deviations
   - com.nokia.eda.components.v1.InterfaceModule_metadata
   - com.nokia.eda.components.v1.Monitor_DeletedResourceEntry
+  - com.nokia.eda.components.v1.Monitor_alarms
+  - com.nokia.eda.components.v1.Monitor_deviations
   - com.nokia.eda.components.v1.Monitor_metadata
+  - com.nokia.eda.components.v1.PowerSupply_alarms
+  - com.nokia.eda.components.v1.PowerSupply_deviations
   - com.nokia.eda.components.v1.PowerSupply_metadata
