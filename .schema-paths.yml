@@ -34,11 +34,6 @@ k8_s_topology_request:
       path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}/_topology
       method: POST
 
-patch:
-  - update:
-      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
-      method: PATCH
-
 resource_history:
   - read:
       path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/chassis/{name}/_revs
@@ -194,6 +189,9 @@ com.nokia.eda.components.v1.monitor:
   - update:
       path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
       method: PUT
+  - update:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
+      method: PATCH
 
 com.nokia.eda.components.v1.monitor_list:
   - read:
@@ -226,8 +224,8 @@ com.nokia.eda.components.v1.power_supply_list:
 
 totalPaths: 52
 totalSchemas: 89
-usedSchemas: 26
-unusedSchemas: 63
+usedSchemas: 25
+unusedSchemas: 64
 unusedSchemaList:
   - AppGroupVersion
   - ErrorIndex
@@ -236,6 +234,7 @@ unusedSchemaList:
   - IntentTarget
   - K8SPatchOp
   - OverlayState
+  - Patch
   - Resource
   - ResourceHistoryEntry
   - StatusDetails

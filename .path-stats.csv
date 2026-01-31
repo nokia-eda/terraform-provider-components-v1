@@ -45,7 +45,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/_deleted,GET,com.nokia.eda.components.v1.Monitor_DeletedResources,,false,false,false
 /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name},DELETE,Status,monitor,true,false,true
 /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name},GET,com.nokia.eda.components.v1.Monitor,monitor,true,true,true
-/apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name},PATCH,Patch,,false,false,false
+/apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name},PATCH,com.nokia.eda.components.v1.Monitor,,false,false,false
 /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name},PUT,com.nokia.eda.components.v1.Monitor,monitor,true,false,true
 /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}/_targets,GET,IntentTargets,,false,false,false
