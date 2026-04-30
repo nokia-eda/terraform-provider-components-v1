@@ -1,0 +1,108 @@
+provider:
+  name: components
+
+data_sources:
+  app_group:
+    read:
+      path: /apps/components.eda.nokia.com
+      method: GET
+
+  chassis:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/chassis/{name}
+      method: GET
+
+  chassis_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/chassis
+      method: GET
+
+  component:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/components/{name}
+      method: GET
+
+  component_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/components
+      method: GET
+
+  control_module:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/controlmodules/{name}
+      method: GET
+
+  control_module_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/controlmodules
+      method: GET
+
+  fabric_module:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/fabricmodules/{name}
+      method: GET
+
+  fabric_module_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/fabricmodules
+      method: GET
+
+  fan:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/fans/{name}
+      method: GET
+
+  fan_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/fans
+      method: GET
+
+  interface_module:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/interfacemodules/{name}
+      method: GET
+
+  interface_module_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/interfacemodules
+      method: GET
+
+  monitor:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
+      method: GET
+
+  monitor_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors
+      method: GET
+
+  power_supply:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/powersupplies/{name}
+      method: GET
+
+  power_supply_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/powersupplies
+      method: GET
+
+  resource_list:
+    read:
+      path: /apps/components.eda.nokia.com/v1
+      method: GET
+
+resources:
+  monitor:
+    create:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors
+      method: POST
+    read:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
+      method: GET
+    update:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
+      method: PUT
+    delete:
+      path: /apps/components.eda.nokia.com/v1/namespaces/{namespace}/monitors/{name}
+      method: DELETE
